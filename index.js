@@ -23,6 +23,29 @@ const jpncities = {
   "Shizuoka": [138.383056, 34.976944],
   "Aichi": [136.906667, 35.180278],
   "Mie": [136.508611, 34.730278],
+  "Shiga": [135.868333, 35.004444],
+  "Kyoto": [135.755556, 35.021389],
+  "Osaka": [135.52, 34.686389],
+  "Hyogo": [135.183333, 34.691389],
+  "Nara": [135.832778, 34.685278],
+  "Wakayama": [135.1675, 34.226111],
+  "Tottori": [133.825556, 35.503611],
+  "Shimane": [133.050556, 35.472222],
+  "Okayama": [133.935, 34.661667],
+  "Hiroshima": [132.459444, 34.396389],
+  "Yamaguchi": [131.471389, 34.186111],
+  "Tokushima": [134.559444, 34.065833],
+  "Kagawa": [133.841667, 34.340278],
+  "Ehime": [132.766111, 33.841667],
+  "Kochi": [133.531111, 33.559722],
+  "Fukuoka": [130.418056, 33.606389],
+  "Saga": [130.298889, 33.249444],
+  "Nagasaki": [129.873611, 32.744722],
+  "Kumamoto": [130.741667, 32.789722],
+  "Oita": [131.6125, 33.238056],
+  "Miyazaki": [131.423889, 31.911111],
+  "Kagoshima": [130.558056, 31.560278],
+  "Okinawa": [127.681111, 26.2125]
 }
 
 const queryString = window.location.search;
@@ -128,6 +151,7 @@ async function getWeather() {
       .setPopup(new maplibregl.Popup().setHTML(`
         <h2>${key}</h2>
         <h3>${data.innerHTML = data.weather[0].hourly[0].weatherDesc[0].value}</h3>
+        <a href="https://wttr.in/${key}" target="_blank">info</a>
         `))
       .addTo(map);
   }
